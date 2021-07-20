@@ -27,15 +27,13 @@ public class LargestPairInArray {
 
     public int largestPairSum2(int[] inputArray) {
 
-        List<Integer> ints1 = new ArrayList<>(inputArray.length);
-        Arrays.stream(inputArray).forEach(myInt -> ints1.add(myInt));
+        List<Integer> inputList = new ArrayList<>(inputArray.length);
+        Arrays.stream(inputArray).forEach(myInt -> inputList.add(myInt));
 
-        Collections.sort(ints1);
+        Collections.sort(inputList);
 
-        int lastIndex = ints1.size() - 1;
-        int mySum = ints1.get(lastIndex) + ints1.get(lastIndex - 1);
-
-
+        int lastIndex = inputList.size() - 1;
+        int mySum = inputList.get(lastIndex) + inputList.get(lastIndex - 1);
 
 
         return mySum;
